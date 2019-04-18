@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FirebaseService} from '../../services/firebase.service';
+import {LoginService} from '../../services/login.service';
 
 @Component({
   selector: 'app-program',
@@ -8,12 +8,13 @@ import {FirebaseService} from '../../services/firebase.service';
 })
 export class ProgramComponent implements OnInit {
 
-  constructor(private _firebaseService: FirebaseService) { }
+  constructor(private _login: LoginService) {
+  }
 
   ngOnInit() {
-    this._firebaseService.getListings().subscribe(
-      listing => console.log('xxxx', listing)
-    );
+  }
+  loginGoogle() {
+    this._login.login();
   }
 
 }

@@ -3,7 +3,15 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyD4wEKuq1n3mNiUJ-TH-kmCzpAqsMcKHJE',
+    authDomain: 'endometrioza-project.firebaseapp.com',
+    databaseURL: 'https://endometrioza-project.firebaseio.com',
+    projectId: 'endometrioza-project',
+    storageBucket: 'endometrioza-project.appspot.com',
+    messagingSenderId: '33903765590'
+  }
 };
 
 /*
