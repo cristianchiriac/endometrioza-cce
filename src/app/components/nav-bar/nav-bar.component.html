@@ -1,6 +1,15 @@
-<div>
-  <a routerLink="/home">Home</a>
-  <a routerLink="/program">Program</a>
-  <a href="#">Login</a>
-  <a href="#">Logout</a>
+<div class="navigation-bar">
+  <div class="login-logout">
+    <a *ngIf="!user" (click)="loginUser()">Log in</a>
+    <a *ngIf="user" (click)="logoutUser()">Log out</a>
+  </div>
+  <div class="menu">
+    <a routerLink="/home">Home</a>
+    <a href="#">Begin Here</a>
+    <a href="#">FAQ</a>
+    <a href="#">Shape the Future</a>
+    <a href="#">Success stories</a>
+    <a routerLink="/program">Program</a>
+    <a href="#">Contact</a>
+  </div>
 </div>

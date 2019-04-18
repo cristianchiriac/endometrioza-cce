@@ -1,4 +1,47 @@
-a {
-  text-decoration: none;
-  padding: 1rem;
+@import '../../../content/style/variables';
+
+.navigation-bar {
+  color: $white-color;
+
+  .login-logout {
+    background-color: $black-color;
+    text-align: right;
+    letter-spacing: 0.2rem;
+
+    a {
+      text-transform: uppercase;
+      padding-right: 2rem;
+
+      &:hover {
+        cursor: pointer;
+        color: $grey-color;
+      }
+    }
+  }
+
+  .menu {
+    //position: fixed;
+    //width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $nav-color;
+    letter-spacing: 0.3rem;
+
+    a {
+      text-decoration: none;
+      color: $white-color;
+      text-transform: uppercase;
+      padding: 2rem 4rem;
+      border-left: solid 2px $black-color;
+
+      &:hover {
+        color: $black-color;
+      }
+    }
+
+    a:last-child {
+      border-right: solid 0.2rem $black-color;
+    }
+  }
 }
