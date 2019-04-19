@@ -3,8 +3,12 @@ import { CommonModule } from '@angular/common';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatToolbarModule} from '@angular/material';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule } from '@angular/material/icon';
+import {
+  MatCardModule,
+  MatFormFieldModule,
+  MatToolbarModule
+} from '@angular/material';
 
 
 @NgModule({
@@ -14,7 +18,9 @@ import {MatIconModule} from '@angular/material/icon';
         MatButtonModule,
         BrowserAnimationsModule,
         MatToolbarModule,
-        MatIconModule
+        MatIconModule,
+        MatCardModule,
+        MatFormFieldModule
     ],
     exports: [
         CommonModule,
@@ -22,7 +28,9 @@ import {MatIconModule} from '@angular/material/icon';
         MatButtonModule,
         BrowserAnimationsModule,
         MatToolbarModule,
-        MatIconModule
+        MatIconModule,
+        MatCardModule,
+        MatFormFieldModule
     ]
 })
 export class MaterialDesignModule {}

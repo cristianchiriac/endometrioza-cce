@@ -1,10 +1,12 @@
 @import '../../../content/style/variables';
 
 .navigation-bar {
-  color: $white-color;
+  color: $grey-color;
+  font-weight: bold;
+  font-size: 1.2rem;
 
   .login-logout {
-    background-color: $black-color;
+    background-color: $white-color;
     text-align: right;
     letter-spacing: 0.2rem;
 
@@ -20,20 +22,22 @@
   }
 
   .menu {
-    //position: fixed;
-    //width: 100%;
+    position: fixed;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: $nav-color;
+    // background-color: $nav-color;
+    background: linear-gradient(141deg, $black-color 0%, #1fc8db 51%, $black-color 100%);
     letter-spacing: 0.3rem;
+    z-index: 10;
 
     a {
       text-decoration: none;
       color: $white-color;
       text-transform: uppercase;
       padding: 2rem 4rem;
-      border-left: solid 2px $black-color;
+      border-left: solid 2px $white-color;
 
       &:hover {
         color: $black-color;
@@ -41,7 +45,7 @@
     }
 
     a:last-child {
-      border-right: solid 0.2rem $black-color;
+      border-right: solid 0.2rem $white-color;
     }
   }
 }

@@ -7,12 +7,13 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { FirebaseService } from './services/firebase.service';
+import { MaterialDesignModule } from './material-design.module';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProgramComponent } from './components/program/program.component';
-import { MaterialDesignModule } from './material-design.module';
+import {MatInputModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,12 +24,13 @@ import { MaterialDesignModule } from './material-design.module';
   ],
   imports: [
     BrowserModule,
+    MaterialDesignModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
     AppRoutingModule,
-    MaterialDesignModule
+    MatInputModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

@@ -1,9 +1,224 @@
-.home-component {
-  background-image:url("../../../content/images/back1.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  h1 {
+@import '../../../content/style/variables';
+
+app-home {
+
+  .home-component {
+    height: 100%;
     margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+
+    .pimg1, .pimg2, .pimg3 {
+      position: relative;
+      // opacity: 0.70;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      /*
+        fixed = parallax
+        scroll = normal
+      */
+      background-attachment: fixed;
+    }
+
+    .pimg1 {
+      background-image: url('../../../content/images/img7.jpg');
+      min-height: 100vh;
+    }
+
+    .pimg2 {
+      background-image: url('../../../content/images/back1.jpg');
+      min-height: 50rem;
+    }
+
+    .pimg3 {
+      background-image: url('../../../content/images/image14.jpg');
+      min-height: 50rem;
+    }
+
+    .section {
+      text-align: center;
+      padding: 5rem 8rem;
+    }
+
+    .section-light {
+      background-color: $white-color;
+      color: $grey-color;
+    }
+
+
+    .ptext {
+      position: absolute;
+      top: 37%;
+      width: 50%;
+      -webkit-transform: translate(50%, 0);
+      text-align: center;
+      color: $white-color;
+
+      h1 {
+        padding: 1rem 0;
+        text-transform: uppercase;
+        line-height: 5rem;
+        letter-spacing: 0.8rem;
+        border-top: solid 0.2rem $white-color;
+        border-bottom: solid 0.2rem $white-color;
+      }
+
+      p {
+        padding: 0 8rem 2rem 8rem;
+        letter-spacing: 0.2rem;
+      }
+    ;
+
+      button {
+        background-color: $white-color;
+        color: $nav-color;
+        text-transform: uppercase;
+        letter-spacing: 0.2rem;
+        padding: 1.5rem 4rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .section-one {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 5rem 30rem;
+
+      .image {
+        width: 40rem;
+        height: 40rem;
+        background-image: url('../../../content/images/img10.jpg');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+      }
+
+      .bibliography {
+        width: 50%;
+        text-indent: 5rem;
+        text-align: justify;
+        font-weight: lighter;
+        font-style: italic;
+
+        strong {
+          padding-top: 10px;
+          font-style: normal;
+        }
+      }
+    }
+
+    .ptext-tow {
+      top: 23%;
+
+      .image-tow {
+        p {
+          text-align: left;
+        }
+      }
+    }
+
+    .stories {
+      h2 {
+        padding: 2rem 0 3rem 0;
+      }
+
+      .success-stories {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-bottom: 5rem;
+
+        .story {
+          height: 50rem;
+          width: 40rem;
+          // border: solid red 2px;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &:hover {
+            opacity: 0.6;
+            transform: translateY(-6px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+          }
+
+          &:after {
+            transform: scaleX(1.9) scaleY(2.1);
+            opacity: 0;
+          }
+        }
+
+        .story1 {
+          background-image: url('../../../content/images/stories1.jpg');
+        }
+
+        .story2 {
+          background-image: url('../../../content/images/stories2.jpg');
+        }
+
+        .story3 {
+          background-image: url('../../../content/images/stories3.jpg');
+        }
+
+        .story4 {
+          background-image: url('../../../content/images/stories4.jpg');
+        }
+
+        .story5 {
+          background-image: url('../../../content/images/stories5.jpg');
+        }
+
+        .story6 {
+          background-image: url('../../../content/images/stories6.jpg');
+        }
+
+      }
+    }
+
+    .social-icon {
+      a {
+        text-decoration: none;
+      }
+
+      .fab {
+        font-size: 5rem;
+        color: $white-color;
+        padding: 0 5rem;
+
+      }
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+
+      .privacy a {
+        text-decoration: none;
+        padding-right: 4rem;
+        color: $grey-color;
+      }
+      p {
+        margin: 0;
+      }
+    }
+
+    @media(max-width: 568px) {
+      .pimg1, .pimg2, .pimg3 {
+        background-attachment: scroll;
+      }
+    }
   }
 }

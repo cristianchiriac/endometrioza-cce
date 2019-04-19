@@ -5,7 +5,7 @@ import {ProgramComponent} from './components/program/program.component';
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent
   },
   {
