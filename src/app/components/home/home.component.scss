@@ -147,9 +147,10 @@ app-home {
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
+          opacity: 0.8;
 
           &:hover {
-            opacity: 0.6;
+            opacity: 1;
             transform: translateY(-6px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
           }
