@@ -13,6 +13,8 @@
     a {
       text-transform: uppercase;
       padding-right: 2rem;
+      text-decoration: none;
+      color: $black-second-color;
 
       &:hover {
         cursor: pointer;

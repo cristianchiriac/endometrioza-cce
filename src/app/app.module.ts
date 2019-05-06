@@ -13,7 +13,11 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { ProgramComponent } from './components/program/program.component';
-import {MatInputModule} from '@angular/material';
+import { BeginHereComponent } from './components/begin-here/begin-here.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { RegisterComponent } from './components/program/register/register.component';
+import { LoginComponent } from './components/program/login/login.component';
+import { ForgotPasswordComponent } from './components/program/forgot-password/forgot-password.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +25,10 @@ import {MatInputModule} from '@angular/material';
     HomeComponent,
     NavBarComponent,
     ProgramComponent,
+    BeginHereComponent,
+    RegisterComponent,
+    LoginComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +38,8 @@ import {MatInputModule} from '@angular/material';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AppRoutingModule,
-    MatInputModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]

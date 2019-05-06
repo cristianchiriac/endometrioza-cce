@@ -1,0 +1,53 @@
+<mat-card class="card">
+  <div class="card-header">
+    <h2>LOGIN FORM</h2>
+  </div>
+  <div class="card-content">
+    <div class="login-buttons">
+      <div class="btn-wrap">
+        <button
+          (click)="loginGoogle()"
+          class="google">GOOGLE
+        </button>
+      </div>
+      <div class="btn-wrap">
+        <button
+          (click)="loginFb()"
+          class="facebook">FACEBOOK
+        </button>
+      </div>
+    </div>
+    <form
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      class="form-container">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Email address.."
+          formControlName="email">
+      </mat-form-field>
+      <!--      <mat-form-field>-->
+      <!--        <input-->
+      <!--          matInput-->
+      <!--          placeholder="Password"-->
+      <!--          formControlName="password">-->
+      <!--      </mat-form-field>-->
+
+      <mat-form-field>
+        <input
+          matInput placeholder="Enter your password"
+          [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">
+          {{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
+      </mat-form-field>
+
+      <a routerLink="/reset-password">Forgotten your password?</a>
+      <div class="btn-container">
+        <button type="submit" [disabled]="!loginForm.valid">SIGN IN</button>
+        <button routerLink="/register">CREATE AN ACCOUNT</button>
+      </div>
+    </form>
+  </div>
+</mat-card>

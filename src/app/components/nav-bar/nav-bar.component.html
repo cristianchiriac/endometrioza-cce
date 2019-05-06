@@ -1,6 +1,9 @@
 <div class="navigation-bar">
   <div class="login-logout">
-    <a *ngIf="!user" routerLink="/program">Log in</a>
+    <a
+      *ngIf="!user"
+       routerLink="/program">Log in
+    </a>
     <a *ngIf="user" (click)="logoutUser()">Log out</a>
   </div>
   <div class="menu">
