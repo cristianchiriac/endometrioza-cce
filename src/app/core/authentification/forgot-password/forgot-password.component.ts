@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {LoginService} from '../../../services/login.service';
+import {LoginService} from '../services/login.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -25,7 +25,7 @@ export class ForgotPasswordComponent implements OnInit {
 
   onSubmit() {
     console.log(this.resetPasswordForm);
-    const email = this.resetPasswordForm.value.email;
+    const email = this.resetPasswordForm.value.email.trim();
     this._login.sendPasswordResetEmail(email);
   }
 }

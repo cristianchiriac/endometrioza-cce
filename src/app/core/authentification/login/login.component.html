@@ -1,3 +1,5 @@
+<div class="container">
+
 <mat-card class="card">
   <div class="card-header">
     <h2>LOGIN FORM</h2>
@@ -7,13 +9,17 @@
       <div class="btn-wrap">
         <button
           (click)="loginGoogle()"
-          class="google">GOOGLE
+          class="google">
+          <i class="fab fa-google"></i>
+          GOOGLE
         </button>
       </div>
       <div class="btn-wrap">
         <button
           (click)="loginFb()"
-          class="facebook">FACEBOOK
+          class="facebook">
+          <i class="fab fa-facebook-f"></i>
+          FACEBOOK
         </button>
       </div>
     </div>
@@ -27,15 +33,10 @@
           placeholder="Email address.."
           formControlName="email">
       </mat-form-field>
-      <!--      <mat-form-field>-->
-      <!--        <input-->
-      <!--          matInput-->
-      <!--          placeholder="Password"-->
-      <!--          formControlName="password">-->
-      <!--      </mat-form-field>-->
-
+     
       <mat-form-field>
         <input
+          formControlName="password"
           matInput placeholder="Enter your password"
           [type]="hide ? 'password' : 'text'">
         <mat-icon matSuffix (click)="hide = !hide">
@@ -51,3 +52,4 @@
     </form>
   </div>
 </mat-card>
+</div>

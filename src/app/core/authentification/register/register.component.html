@@ -10,11 +10,20 @@
           placeholder="Email address.."
           formControlName="email">
       </mat-form-field>
-      <mat-form-field>
+      <!-- <mat-form-field>
         <input
           matInput
           placeholder="Password"
           formControlName="password">
+      </mat-form-field> -->
+      <mat-form-field>
+        <input
+          formControlName="password"
+          matInput placeholder="Enter your password"
+          [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">
+          {{hide ? 'visibility_off' : 'visibility'}}
+        </mat-icon>
       </mat-form-field>
       <div class="btn-container">
         <button>CREATE</button>

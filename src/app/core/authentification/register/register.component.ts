@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {LoginService} from '../../../services/login.service';
+import {LoginService} from '../services/login.service';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +11,8 @@ import {LoginService} from '../../../services/login.service';
 })
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
-  constructor( private _login: LoginService) { }
+  hide = true;
+  constructor( private loginService: LoginService) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({
@@ -24,8 +25,8 @@ export class RegisterComponent implements OnInit {
   }
   onSubmit() {
     console.log(this.registerForm);
-    const email = this.registerForm.value.email;
+    const email = this.registerForm.value.email.trim();
     const password = this.registerForm.value.password;
-    this._login.register(email, password);
+    this.loginService.register(email, password);
   }
 }

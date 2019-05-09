@@ -1,11 +1,11 @@
 <div class="navigation-bar">
-  <div class="login-logout">
+  <!-- <div class="login-logout">
     <a
       *ngIf="!user"
        routerLink="/program">Log in
     </a>
     <a *ngIf="user" (click)="logoutUser()">Log out</a>
-  </div>
+  </div> -->
   <div class="menu">
     <a routerLink="">Home</a>
     <a routerLink="/begin-here">Begin Here</a>
@@ -14,5 +14,10 @@
     <a href="#">Success stories</a>
     <a routerLink="/program">Program</a>
     <a href="#">Contact</a>
+    <a
+      *ngIf="!user"
+       routerLink="/login">Log in
+    </a>
+    <a *ngIf="user" (click)="logoutUser()">Log out</a>
   </div>
 </div>
