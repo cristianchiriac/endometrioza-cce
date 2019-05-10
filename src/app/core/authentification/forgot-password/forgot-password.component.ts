@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {LoginService} from '../services/login.service';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { LoginService } from '../services/login.service';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-forgot-password',

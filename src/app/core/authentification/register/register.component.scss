@@ -31,7 +31,9 @@ app-register {
         padding: 2rem 4rem;
         border-radius: 0.5rem;
         color: $white-color;
+        letter-spacing: 0.2rem;
         opacity: 0.9;
+        font-weight: 700;
         background-color: $nav-color;
 
         &:hover {

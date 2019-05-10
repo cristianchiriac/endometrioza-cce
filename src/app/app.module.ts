@@ -14,7 +14,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
 import { ProgramComponent } from './pages/program/program.component';
 import { BeginHereComponent } from './pages/begin-here/begin-here.component';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './core/authentification/register/register.component';
 import { LoginComponent } from './core/authentification/login/login.component';
 import { ForgotPasswordComponent } from './core/authentification/forgot-password/forgot-password.component';

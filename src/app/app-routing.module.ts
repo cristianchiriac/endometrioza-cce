@@ -6,6 +6,7 @@ import { BeginHereComponent } from './pages/begin-here/begin-here.component';
 import { RegisterComponent } from './core/authentification/register/register.component';
 import { ForgotPasswordComponent } from './core/authentification/forgot-password/forgot-password.component';
 import { LoginComponent } from './core/authentification/login/login.component';
+import { AuthGuard } from './core/authentification/services/auth/auth.guard';
 
 const routes: Routes = [
   {
@@ -14,11 +15,12 @@ const routes: Routes = [
   },
   {
     path: 'program',
-    component: ProgramComponent
+    component: ProgramComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'begin-here',
-    component: BeginHereComponent
+    component: BeginHereComponent,
   },
   {
     path: 'register',

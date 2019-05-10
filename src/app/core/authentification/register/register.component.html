@@ -9,13 +9,14 @@
           matInput
           placeholder="Email address.."
           formControlName="email">
+          <mat-error *ngIf="registerForm.controls.email.hasError('pattern') && !registerForm.controls.email.hasError('required')">
+            Please enter a valid email address
+         </mat-error>
+         <mat-error *ngIf="registerForm.controls.email.hasError('required')">
+           Email is <strong>required</strong>
+         </mat-error>
       </mat-form-field>
-      <!-- <mat-form-field>
-        <input
-          matInput
-          placeholder="Password"
-          formControlName="password">
-      </mat-form-field> -->
+     
       <mat-form-field>
         <input
           formControlName="password"
@@ -24,6 +25,9 @@
         <mat-icon matSuffix (click)="hide = !hide">
           {{hide ? 'visibility_off' : 'visibility'}}
         </mat-icon>
+        <mat-error *ngIf="registerForm.controls.password.hasError('required')">
+          Password is <strong>required</strong>
+        </mat-error>
       </mat-form-field>
       <div class="btn-container">
         <button>CREATE</button>
