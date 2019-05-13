@@ -1,3 +1,26 @@
 <div class="container">
   <p *ngIf="user">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quisquam.</p>
+  
+   
+    <section>
+      <youtube-player
+        [videoId]="id"
+        (ready)="savePlayer($event)"
+        (change)="onStateChange($event)"
+        [playerVars]="playerVars">
+      </youtube-player>
+    </section>
+
+    <div>
+      <button
+      type="button"
+      (click)="playVideo()">
+      Play
+    </button>
+    <button
+      type="button"
+      (click)="pauseVideo()">
+      Pause
+    </button>
+  </div>
 </div>

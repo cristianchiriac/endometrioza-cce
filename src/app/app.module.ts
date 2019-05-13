@@ -7,6 +7,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialDesignModule } from './material-design.module';
+import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
 
 import { FirebaseService } from './core/authentification/services/firebase.service';
 import { AppComponent } from './app.component';
@@ -39,7 +40,8 @@ import { ForgotPasswordComponent } from './core/authentification/forgot-password
     AngularFireStorageModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent]
