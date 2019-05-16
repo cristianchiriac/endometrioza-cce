@@ -1,7 +1,7 @@
-import {Injectable, NgZone} from '@angular/core';
-import {AngularFireAuth} from '@angular/fire/auth';
-import {auth, User} from 'firebase/app';
-import {Router} from '@angular/router';
+import { Injectable, NgZone } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/auth';
+import { auth, User } from 'firebase/app';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -24,24 +24,22 @@ export class LoginService {
     });
   }
 
-   loginEmail(email: string, password: string) {
+  loginEmail(email: string, password: string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
       .catch(error => console.log(error));
   }
 
+
   register(email: string, password: string) {
-    this.afAuth.auth.createUserWithEmailAndPassword(email, password)
-      .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
-      .catch(error => console.log(error));
-    this.sendEmailVerification();
+    return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+      .then(() => this.afAuth.auth.currentUser.sendEmailVerification()
+        .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
+        .catch((error) => console.log('Error: ' + error)
+        ));
   }
 
-  private sendEmailVerification() {
-    this.afAuth.auth.currentUser.sendEmailVerification()
-      .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
-      .catch(error => console.log(error));
-  }
+
 
   sendPasswordResetEmail(passwordResetEmail: string) {
     this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
