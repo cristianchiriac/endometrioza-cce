@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {LoginService} from '../services/login.service';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from '../services/login.service';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +12,7 @@ import {LoginService} from '../services/login.service';
 export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   hide = true;
-  constructor( private loginService: LoginService) { }
+  constructor(private loginService: LoginService) { }
 
   ngOnInit() {
     this.registerForm = new FormGroup({

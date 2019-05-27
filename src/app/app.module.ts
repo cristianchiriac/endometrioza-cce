@@ -7,7 +7,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialDesignModule } from './material-design.module';
-import {NgxYoutubePlayerModule} from 'ngx-youtube-player';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 
 import { FirebaseService } from './core/authentification/services/firebase.service';
 import { AppComponent } from './app.component';
@@ -19,6 +19,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './core/authentification/register/register.component';
 import { LoginComponent } from './core/authentification/login/login.component';
 import { ForgotPasswordComponent } from './core/authentification/forgot-password/forgot-password.component';
+import { SharedModule } from './shared/shared.modules';
+import { SnackBarComponent } from './shared/components/snack-bar/snack-bar.component';
 
 @NgModule({
   declarations: [
@@ -41,9 +43,12 @@ import { ForgotPasswordComponent } from './core/authentification/forgot-password
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    SharedModule,
     NgxYoutubePlayerModule.forRoot()
   ],
   providers: [FirebaseService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [SnackBarComponent]
+
 })
 export class AppModule { }

@@ -10,7 +10,7 @@ import { LoginService } from '../../core/authentification/services/login.service
 })
 export class ProgramComponent implements OnInit {
   user: boolean;
-  id = 'R10Rtu2Lj-g';
+  id = 'AVcp5VePBi8';
   playerVars = {
     cc_lang_pref: 'en'
   };
@@ -40,5 +40,4 @@ export class ProgramComponent implements OnInit {
   pauseVideo() {
     this.player.pauseVideo();
   }
-
 }

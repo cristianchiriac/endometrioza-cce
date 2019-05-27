@@ -2,6 +2,9 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth, User } from 'firebase/app';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
+
+import { SnackBarComponent } from './../../../shared/components/snack-bar/snack-bar.component';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +15,7 @@ export class LoginService {
   constructor(
     public afAuth: AngularFireAuth,
     public route: Router,
+    public snackBar: MatSnackBar,
     private _zone: NgZone
   ) {
     this.afAuth.authState.subscribe(user => {
@@ -34,8 +38,16 @@ export class LoginService {
   register(email: string, password: string) {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then(() => this.afAuth.auth.currentUser.sendEmailVerification()
-        .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
-        .catch((error) => console.log('Error: ' + error)
+        .then(success => this._zone.run(() => {
+          this.route.navigate(['/begin-here'])
+          this.snackBar.openFromComponent(SnackBarComponent, {
+            duration: 2000,
+            data: {
+              message: 'You have successfully crested a account!'
+            }
+          });
+        }))
+        .catch((error) => console.log(error)
         ));
   }
 
