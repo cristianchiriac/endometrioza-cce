@@ -30,8 +30,22 @@ export class LoginService {
 
   loginEmail(email: string, password: string) {
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
-      .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
-      .catch(error => console.log(error));
+      .then(success => this._zone.run(() => {
+        this.route.navigate(['/begin-here']);
+        this.snackBar.openFromComponent(SnackBarComponent, {
+          duration: 3000,
+          panelClass: ['error-message'],
+          data: {
+            message: 'You have successfully login!'
+          }
+        });
+      }))
+      .catch(error => this.snackBar.openFromComponent(SnackBarComponent, {
+        duration: 3000,
+        data: {
+          message: error
+        }
+      }));
   }
 
 
@@ -41,9 +55,9 @@ export class LoginService {
         .then(success => this._zone.run(() => {
           this.route.navigate(['/begin-here'])
           this.snackBar.openFromComponent(SnackBarComponent, {
-            duration: 2000,
+            duration: 3000,
             data: {
-              message: 'You have successfully crested a account!'
+              message: 'You have successfully created a account!'
             }
           });
         }))
@@ -76,7 +90,15 @@ export class LoginService {
 
   loginGoogle() {
     this.afAuth.auth.signInWithPopup(new auth.GoogleAuthProvider())
-      .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
+      .then(success => this._zone.run(() => {
+        this.route.navigate(['/begin-here']);
+        this.snackBar.openFromComponent(SnackBarComponent, {
+          duration: 3000,
+          data: {
+            message: 'You have successfully login!'
+          }
+        });
+    }))
       .catch(error => console.log(error));
   }
 

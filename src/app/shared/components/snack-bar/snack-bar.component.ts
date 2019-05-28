@@ -9,8 +9,5 @@ import { MAT_SNACK_BAR_DATA } from '@angular/material';
 
 })
 export class SnackBarComponent {
-  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) {
-    console.log(data);
-   }
-  
+  constructor(@Inject(MAT_SNACK_BAR_DATA) public data: any) { }
 }
