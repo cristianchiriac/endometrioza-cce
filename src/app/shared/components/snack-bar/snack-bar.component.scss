@@ -5,5 +5,9 @@
     color: $white-color;
 }
 .error-message {
-    background: red;
+    background-color: $error-color;
+}
+
+.success-message {
+    background-color: $nav-color;
 }

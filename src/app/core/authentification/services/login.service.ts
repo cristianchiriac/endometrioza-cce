@@ -34,7 +34,7 @@ export class LoginService {
         this.route.navigate(['/begin-here']);
         this.snackBar.openFromComponent(SnackBarComponent, {
           duration: 3000,
-          panelClass: ['error-message'],
+          panelClass: ['success-message'],
           data: {
             message: 'You have successfully login!'
           }
@@ -42,6 +42,7 @@ export class LoginService {
       }))
       .catch(error => this.snackBar.openFromComponent(SnackBarComponent, {
         duration: 3000,
+        panelClass: ['error-message'],
         data: {
           message: error
         }
