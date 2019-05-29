@@ -1,13 +1,14 @@
-@import '../../../../content/style/variables';
+@import "../../../../content/style/variables";
 
 .snack-bar {
-    text-align: center;
-    color: $white-color;
+  text-align: center;
+  color: $white-color;
+  letter-spacing: 0.3rem;
 }
 .error-message {
-    background-color: $error-color;
+  background-color: $error-color;
 }
 
 .success-message {
-    background-color: $nav-color;
+  background-color: $main-color;
 }

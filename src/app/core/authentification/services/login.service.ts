@@ -2,9 +2,10 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth, User } from 'firebase/app';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar, MatBottomSheet } from '@angular/material';
 
 import { SnackBarComponent } from './../../../shared/components/snack-bar/snack-bar.component';
+import { BottomSheetComponent } from './../../../shared/components/bottom-sheet/bottom-sheet.component';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,7 @@ export class LoginService {
     public afAuth: AngularFireAuth,
     public route: Router,
     public snackBar: MatSnackBar,
+    public bottomSheet: MatBottomSheet,
     private _zone: NgZone
   ) {
     this.afAuth.authState.subscribe(user => {
@@ -55,8 +57,7 @@ export class LoginService {
       .then(() => this.afAuth.auth.currentUser.sendEmailVerification()
         .then(success => this._zone.run(() => {
           this.route.navigate(['/begin-here'])
-          this.snackBar.openFromComponent(SnackBarComponent, {
-            duration: 3000,
+          this.bottomSheet.open(BottomSheetComponent, {
             data: {
               message: 'You have successfully created a account!'
             }
@@ -95,11 +96,12 @@ export class LoginService {
         this.route.navigate(['/begin-here']);
         this.snackBar.openFromComponent(SnackBarComponent, {
           duration: 3000,
+          panelClass: ['success-message'],
           data: {
             message: 'You have successfully login!'
           }
         });
-    }))
+      }))
       .catch(error => console.log(error));
   }
 

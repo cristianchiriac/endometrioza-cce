@@ -21,6 +21,7 @@ import { LoginComponent } from './core/authentification/login/login.component';
 import { ForgotPasswordComponent } from './core/authentification/forgot-password/forgot-password.component';
 import { SharedModule } from './shared/shared.modules';
 import { SnackBarComponent } from './shared/components/snack-bar/snack-bar.component';
+import { BottomSheetComponent } from './shared/components/bottom-sheet/bottom-sheet.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,7 @@ import { SnackBarComponent } from './shared/components/snack-bar/snack-bar.compo
   ],
   providers: [FirebaseService],
   bootstrap: [AppComponent],
-  entryComponents: [SnackBarComponent]
+  entryComponents: [SnackBarComponent, BottomSheetComponent]
 
 })
 export class AppModule { }
