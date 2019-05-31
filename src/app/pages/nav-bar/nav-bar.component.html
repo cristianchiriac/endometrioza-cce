@@ -1,13 +1,27 @@
 <div class="navigation-bar">
   <div class="menu">
-    <a routerLink="">Home</a>
-    <a routerLink="/begin-here">Begin Here</a>
+    <a 
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{exact: true}">Home
+    </a>
+    <a 
+      routerLink="/begin-here"
+      routerLinkActive="active">Begin Here
+    </a>
     <a href="#">FAQ</a>
     <a href="#">Shape the Future</a>
     <a href="#">Success stories</a>
-    <a routerLink="/program">Program</a>
+    <a 
+      routerLink="/program"
+      routerLinkActive="active">Program
+    </a>
     <a href="#">Contact</a>
-    <a *ngIf="!user" routerLink="/login">Log in</a>
+    <a 
+      *ngIf="!user" 
+      routerLink="/login"
+      routerLinkActive="active">Log in
+    </a>
     <a *ngIf="user" (click)="logoutUser()">Log out</a>
   </div>
 </div>

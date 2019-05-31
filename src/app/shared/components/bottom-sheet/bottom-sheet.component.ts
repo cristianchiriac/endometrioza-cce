@@ -11,8 +11,6 @@ export class BottomSheetComponent {
   constructor(
     @Inject(MAT_BOTTOM_SHEET_DATA)
     public data: any,
-    public bottomSheetRef: MatBottomSheetRef) {
-    console.log(data);
-  }
+    public bottomSheetRef: MatBottomSheetRef) { }
 
 }

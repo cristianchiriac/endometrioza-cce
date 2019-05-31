@@ -56,7 +56,7 @@ export class LoginService {
     return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
       .then(() => this.afAuth.auth.currentUser.sendEmailVerification()
         .then(success => this._zone.run(() => {
-          this.route.navigate(['/begin-here'])
+          this.route.navigate([''])
           this.bottomSheet.open(BottomSheetComponent, {
             data: {
               message: 'You have successfully created a account!'
@@ -71,7 +71,14 @@ export class LoginService {
 
   sendPasswordResetEmail(passwordResetEmail: string) {
     this.afAuth.auth.sendPasswordResetEmail(passwordResetEmail)
-      .then(success => this._zone.run(() => this.route.navigate(['/begin-here'])))
+      .then(success => this._zone.run(() => {
+        this.route.navigate(['']);
+        this.bottomSheet.open(BottomSheetComponent, {
+          data: {
+            message: 'We sent a email to reset the password!'
+          }
+        });
+      }))
       .catch(error => console.log(error));
   }
 

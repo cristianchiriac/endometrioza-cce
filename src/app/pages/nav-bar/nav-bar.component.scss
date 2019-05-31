@@ -4,7 +4,9 @@
   color: $grey-color;
   font-weight: bold;
   font-size: 1.2rem;
-
+  .active {
+    color: $second-color !important;
+  }
   .login-logout {
     background-color: $white-color;
     text-align: right;
@@ -30,7 +32,7 @@
     align-items: center;
     justify-content: center;
     // background-color: $nav-color;
-    background: linear-gradient(141deg, $black-color 0%, #00c9be 51%, $black-color 100%);
+    background-color: $main-color;
     letter-spacing: 0.3rem;
     z-index: 10;
 
@@ -42,7 +44,7 @@
       border-left: solid 2px $white-color;
 
       &:hover {
-        color: $black-color;
+        color: $second-color;
       }
     }
 
