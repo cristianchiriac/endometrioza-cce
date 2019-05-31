@@ -22,6 +22,7 @@ import { ForgotPasswordComponent } from './core/authentification/forgot-password
 import { SharedModule } from './shared/shared.modules';
 import { SnackBarComponent } from './shared/components/snack-bar/snack-bar.component';
 import { BottomSheetComponent } from './shared/components/bottom-sheet/bottom-sheet.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { BottomSheetComponent } from './shared/components/bottom-sheet/bottom-sh
     BeginHereComponent,
     RegisterComponent,
     LoginComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

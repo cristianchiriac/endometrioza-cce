@@ -7,6 +7,7 @@ import { RegisterComponent } from './core/authentification/register/register.com
 import { ForgotPasswordComponent } from './core/authentification/forgot-password/forgot-password.component';
 import { LoginComponent } from './core/authentification/login/login.component';
 import { AuthGuard } from './core/authentification/services/auth/auth.guard';
+import { ContactComponent } from './pages/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -33,6 +34,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'contact',
+    component: ContactComponent
   }
 ];
 
