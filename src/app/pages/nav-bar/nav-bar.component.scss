@@ -6,6 +6,7 @@
   font-size: 1.2rem;
   .active {
     color: $second-color !important;
+    border-bottom: solid 0.1rem $second-color;
   }
   .login-logout {
     background-color: $white-color;
@@ -41,7 +42,7 @@
       color: $white-color;
       text-transform: uppercase;
       padding: 2rem 4rem;
-      border-left: solid 2px $white-color;
+      border-left: solid 0.2rem $white-color;
 
       &:hover {
         color: $second-color;
