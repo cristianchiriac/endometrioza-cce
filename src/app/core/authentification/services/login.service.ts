@@ -2,7 +2,8 @@ import { Injectable, NgZone } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { auth, User } from 'firebase/app';
 import { Router } from '@angular/router';
-import { MatSnackBar, MatBottomSheet } from '@angular/material';
+import { MatBottomSheet } from '@angular/material/bottom-sheet';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 import { SnackBarComponent } from './../../../shared/components/snack-bar/snack-bar.component';
 import { BottomSheetComponent } from './../../../shared/components/bottom-sheet/bottom-sheet.component';

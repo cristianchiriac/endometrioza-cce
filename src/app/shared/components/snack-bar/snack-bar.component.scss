@@ -3,7 +3,10 @@
 .snack-bar {
   text-align: center;
   color: $white-color;
-  letter-spacing: 0.3rem;
+  letter-spacing: 0.2rem;
+  h4 {
+   margin: 0;
+  }
 }
 .error-message {
   background-color: $error-color;

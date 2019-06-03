@@ -6,12 +6,17 @@ import { SnackBarComponent } from './components/snack-bar/snack-bar.component';
 
 
 @NgModule({
-    imports: [CommonModule, MaterialDesignModule],
+    imports: [
+        CommonModule, 
+        MaterialDesignModule
+    ],
     declarations: [
         BottomSheetComponent,
         SnackBarComponent
     ],
     exports: [
+        CommonModule, 
+        MaterialDesignModule,
         BottomSheetComponent,
         SnackBarComponent
     ],

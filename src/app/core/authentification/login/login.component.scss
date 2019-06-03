@@ -33,6 +33,7 @@ app-login {
           font-size: 1.2rem;
           &:hover {
             color: $grey-color;
+            cursor: pointer;
           }
         }
       }

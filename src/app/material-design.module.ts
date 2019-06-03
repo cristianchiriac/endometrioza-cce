@@ -4,25 +4,21 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {
-  MatCardModule,
-  MatCheckboxModule,
-  MatFormFieldModule,
-  MatInputModule,
-  MatIconModule,
-  MatToolbarModule,
-  MatSnackBarModule,
-  MatDialogModule,
-  MatBottomSheetModule,
-  } from '@angular/material';
+import { MatBottomSheetModule } from '@angular/material/bottom-sheet';
+import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 
 @NgModule({
     imports: [
-        CommonModule,
         MatMenuModule,
         MatButtonModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatCardModule,
         MatFormFieldModule,
@@ -34,10 +30,8 @@ import {
         MatBottomSheetModule
     ],
     exports: [
-        CommonModule,
         MatMenuModule,
         MatButtonModule,
-        BrowserAnimationsModule,
         MatToolbarModule,
         MatCardModule,
         MatFormFieldModule,
