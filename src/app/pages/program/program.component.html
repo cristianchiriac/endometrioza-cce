@@ -1,7 +1,5 @@
 <div class="container">
   <p *ngIf="user">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, quisquam.</p>
-  
-   
     <section>
       <youtube-player
         [videoId]="id"
@@ -22,5 +20,8 @@
       (click)="pauseVideo()">
       Pause
     </button>
+    <div class="module-1">
+      <button routerLink="chapter-one">Chapter One</button>
+    </div>
   </div>
 </div>
