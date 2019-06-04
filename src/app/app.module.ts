@@ -12,7 +12,6 @@ import { FirebaseService } from './core/authentification/services/firebase.servi
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { NavBarComponent } from './pages/nav-bar/nav-bar.component';
-import { ProgramComponent } from './pages/program/program.component';
 import { BeginHereComponent } from './pages/begin-here/begin-here.component';
 import { SharedModule } from './shared/shared.modules';
 import { SnackBarComponent } from './shared/components/snack-bar/snack-bar.component';
@@ -29,7 +28,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AngularFireAuthModule,
     AngularFireStorageModule,
     AppRoutingModule,
-    NgxYoutubePlayerModule.forRoot(),
     BrowserAnimationsModule,
     AuthentificationModule,
     SharedModule
@@ -38,7 +36,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     HomeComponent,
     NavBarComponent,
-    ProgramComponent,
     BeginHereComponent,
     ContactComponent
   ],

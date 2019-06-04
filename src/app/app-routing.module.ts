@@ -3,12 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './core/authentification/services/auth/auth.guard';
 
 import { HomeComponent } from './pages/home/home.component';
-import { ProgramComponent } from './pages/program/program.component';
 import { BeginHereComponent } from './pages/begin-here/begin-here.component';
 import { RegisterComponent } from './core/authentification/register/register.component';
 import { ForgotPasswordComponent } from './core/authentification/forgot-password/forgot-password.component';
 import { LoginComponent } from './core/authentification/login/login.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { ProgramModule } from './pages/program/program.module';
 
 const routes: Routes = [
   {
@@ -16,8 +16,8 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: 'program',
-    component: ProgramComponent,
+    path: '',
+    loadChildren: './pages/program/program.module#ProgramModule',
     canActivate: [AuthGuard]
   },
   {
